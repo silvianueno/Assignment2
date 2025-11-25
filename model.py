@@ -9,25 +9,18 @@ from sklearn.svm import LinearSVC
 from sklearn.pipeline import Pipeline
 from sklearn import metrics
 
+
+# 1. Load data
 df=pd.read_csv("reservations.csv")
 
 #DATA PREPARATION
-# 1. Contruction of label
+# 2. Build label
 df["label"] = (df["status"] == "checked out").astype(int)
 
-# 2. Data cleaning
-
-# 3. Feature engineering
-
-# 4. Train/Validation/Test
-
-#MODELS 
-
-#1. Models tested
-#Regularization
-#Cross Validation
-#Pipeline
-
-#METRICS
-
+# 3. Identify features
+# 4. Train/test split  ← AQUÍ
+# 5. Preprocessing pipeline
+# 6. GridSearchCV (solo con X_train, y_train)
+# 7. Final model = grid.best_estimator_
+# 8. Evaluate on X_test
 
